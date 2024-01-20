@@ -1,1 +1,0 @@
-export const token = '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'
