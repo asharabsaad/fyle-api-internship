@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.querySelector('.search-button');
 
     if (searchInput) {
-        // Event listener for the "Enter" key
+      
         searchInput.addEventListener('keypress', function (event) {
             if (event.key === 'Enter') {
                 performSearch();
@@ -22,15 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (searchButton) {
-        // Event listener for the search button (optional)
+      
         searchButton.addEventListener('click', performSearch);
     }
 
-    // Function to perform the search
+   
     function performSearch() {
-        // const searchTerm = searchInput.value;
+      
         const username = $('#user-name').val()
-        // Add your search logic here, e.g., make an API call, update the UI, etc.
        
         getUserAndRepositories(username)
     }
@@ -108,7 +107,7 @@ const fetchUri = async (URI) => {
 
 const getUserAndRepositories = async (username) => {
     try {
-        // Fetch user information
+       
         const userResponse = await octokit.request(`GET /users/${username}`);
         const user = userResponse.data;
         // Fetch profile data from an api
